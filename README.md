@@ -1,2 +1,3 @@
-# scarletempress
-Scarlet Empress Website Project
+## Scarlet Empress
+
+Scarlet Empress WebSite Repo
