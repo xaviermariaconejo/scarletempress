@@ -3,7 +3,6 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "seed": "node -r dotenv/config ./scripts/seed.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -20,7 +19,9 @@
     "postcss": "8.4.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^5.0.1",
     "tailwindcss": "3.3.3",
+    "tailwindcss-animated": "^1.0.1",
     "typescript": "5.2.2",
     "use-debounce": "^10.0.0",
     "zod": "^3.22.2"
