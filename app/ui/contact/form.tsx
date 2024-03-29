@@ -63,26 +63,22 @@ export function ContactToSubmitForm({ state }: { state: State }) {
       >
         Enviar
       </button>
-      {!status.pending &&
-        state &&
-        state.status === 'error' &&
-        state.message && (
-          <div id="errors" aria-live="polite" aria-atomic="true">
-            <p className="mt-2 text-sm text-error">{state.message}</p>
-            {state.errors && (
-              <ul className="ml-8 mt-2 list-disc text-sm text-error">
-                {state.errors &&
-                  Object.keys(state.errors).map((fieldName) =>
-                    state.errors[fieldName].map(
-                      (error: string, index: number) => (
-                        <li key={`${fieldName}-${index}`}>{error}</li>
-                      ),
-                    ),
-                  )}
-              </ul>
-            )}
-          </div>
-        )}
+      {!status.pending && state.status === 'error' && state.message && (
+        <div id="errors" aria-live="polite" aria-atomic="true">
+          <p className="mt-2 text-sm text-error">{state.message}</p>
+          <ul className="ml-8 mt-2 list-disc text-sm text-error">
+            {state.errors &&
+              Object.keys(state.errors).map((fieldName) => {
+                if (!state.errors) return null;
+                return state.errors[fieldName].map(
+                  (error: string, index: number) => (
+                    <li key={`${fieldName}-${index}`}>{error}</li>
+                  ),
+                );
+              })}
+          </ul>
+        </div>
+      )}
     </>
   );
 }

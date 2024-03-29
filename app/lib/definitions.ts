@@ -3,9 +3,7 @@ import { z } from 'zod';
 export type State = {
   status: string;
   errors?: {
-    name?: string[];
-    email?: string[];
-    message?: string[];
+    [key: string]: string[];
   };
   message?: string | null;
 };
