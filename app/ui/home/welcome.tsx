@@ -8,7 +8,7 @@ const animationFadeUp =
 export function Welcome() {
   return (
     <section
-      className={`justify-stat relative flex h-screen w-full flex-col items-center overflow-hidden p-10 pb-[120px] md:h-[60vh] md:pt-16`}
+      className={`justify-stat relative flex h-screen w-full flex-col items-center overflow-hidden p-10 pb-[120px] md:h-[60dvh] md:pt-16`}
     >
       <Image
         alt="Background Image"
@@ -44,7 +44,7 @@ export function Welcome() {
       <Link
         href="/services"
         className={clsx(
-          'text-scarlet-500 border-scarlet-500 hover:border-scarlet-700 hover:text-scarlet-700 mt-auto rounded-full border bg-white px-4 py-3 font-semibold shadow-2xl',
+          'mt-auto rounded-full border border-scarlet-500 bg-white px-4 py-3 font-semibold text-scarlet-500 shadow-2xl hover:border-scarlet-700 hover:text-scarlet-700',
           animationFadeUp,
         )}
       >

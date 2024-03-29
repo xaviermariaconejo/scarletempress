@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Instagram } from '@/app/ui/components/instagram';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
 import clsx from 'clsx';
@@ -16,10 +16,28 @@ const animationFade =
   'animate-fade animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  // Manejar el cambio de color basado en la posición de desplazamiento
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    const vh = window.innerHeight * 0.5; // 50vh
+    if (offset > vh) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <header
       className={clsx(
-        'sticky left-0 top-0 z-10 w-full bg-white p-4',
+        'fixed left-0 top-0 z-10 w-full bg-transparent p-4',
         animationFade,
       )}
     >
@@ -34,7 +52,12 @@ export function Header() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="border-b border-transparent hover:border-scarlet-700 hover:text-scarlet-700"
+                    className={clsx(
+                      'border-b border-transparent  hover:border-scarlet-700 hover:text-scarlet-700',
+                      {
+                        'text-white': !scrolled,
+                      },
+                    )}
                   >
                     {link.name}
                   </Link>
@@ -43,12 +66,11 @@ export function Header() {
             })}
           </ul>
         </div>
-        <Link href="/" className="flex items-center lg:w-1/3 lg:justify-center">
-          <span className="self-center whitespace-nowrap border-b border-transparent text-xl font-semibold hover:border-scarlet-700 hover:text-scarlet-700">
-            Scarlet Empress
-          </span>
-        </Link>
-        <div className="flex items-center justify-end lg:w-1/3">
+        <div
+          className={clsx('flex items-center justify-end lg:w-1/3', {
+            'text-white': !scrolled,
+          })}
+        >
           <Instagram />
         </div>
       </nav>
