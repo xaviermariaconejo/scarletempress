@@ -1,7 +1,7 @@
 import '@/app/ui/global.css';
 import { Metadata } from 'next';
 import { poppins } from '@/app/ui/fonts';
-import { Footer } from '@/app/ui/footer';
+import { Footer } from '@/app/ui/components/footer';
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} text-gray-dark flex min-h-screen flex-col antialiased`}
+        className={`${poppins.className} flex min-h-screen flex-col text-gray-dark antialiased`}
       >
         {children}
         <Footer />
