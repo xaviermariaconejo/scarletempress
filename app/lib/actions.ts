@@ -4,7 +4,10 @@ import { ContactEmailTemplate } from '@/app/ui/contact/email-template';
 import { Resend } from 'resend';
 import { State, FormSchema } from '@/app/lib/definitions';
 
-export async function sendContactEmail(prevState: State, formData: FormData) {
+export async function sendContactEmail(
+  prevState: State,
+  formData: FormData,
+): Promise<State> {
   // Validate form using Zod
   const validatedFields = FormSchema.safeParse({
     name: formData.get('name'),

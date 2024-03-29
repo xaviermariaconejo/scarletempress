@@ -98,11 +98,10 @@ export default function Page() {
           utiliza, sus principales características, periodo de expiración, etc.
           en el siguiente(s) enlace(s):
         </p>
-        <p className="mt-4 text-sm">
-          Hostinger:
-          https://support.hostinger.com/en/articles/6491112-website-builder-what-cookies-are-used-on-your-website
+        <p className="mt-4 text-sm italic">
+          Este sitio web no utiliza cookies de terceros actualmente.
         </p>
-        <hr className="border-gray-dark mt-2 border-t" />
+        <hr className="mt-2 border-t border-gray-dark" />
         <p className="mt-4">
           La(s) entidad(es) encargada(s) del suministro de cookies podrá(n)
           ceder esta información a terceros, siempre y cuando lo exija la ley o

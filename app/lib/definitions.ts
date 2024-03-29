@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export type State = {
-  status: string;
+  status: 'success' | 'error' | 'idle' | 'pending';
   errors?: {
     [key: string]: string[];
   };

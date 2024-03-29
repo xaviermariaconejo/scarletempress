@@ -239,14 +239,10 @@ export default function Page() {
             Los datos personales del Usuario serán compartidos con los
             siguientes destinatarios o categorías de destinatarios:
           </p>
-          <p className="mt-4 text-sm">
-            Hostinger International Ltd., sociedad limitada privada de Chipre,
-            con domicilio social en 61 Lordou Vironos str., 6023 Larnaca,
-            Chipre. Datadog Cloud Spain sl , Madrid. GOOGLE SPAIN SL, Plaza
-            Pablo Ruiz Picasso 1 Edf Torre Picasso. 28020, Madrid (Madrid).
-            España.
+          <p className="mt-4 text-sm italic">
+            Este sitio web no utiliza cookies de terceros actualmente.
           </p>
-          <hr className="border-gray-dark mt-2 border-t" />
+          <hr className="mt-2 border-t border-gray-dark" />
           <p className="mt-4">
             En caso de que el Responsable del tratamiento tenga la intención de
             transferir datos personales a un tercer país u organización

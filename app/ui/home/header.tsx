@@ -3,7 +3,7 @@
 import { Instagram } from '@/app/ui/components/instagram';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
 import { useMatchMedia } from '@/app/lib/hooks';
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
@@ -21,7 +21,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   // Manejar el cambio de color basado en la posición de desplazamiento
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const offset = window.scrollY;
     const vh = isMediumUp ? window.innerHeight * 0.5 : window.innerHeight * 0.9; // 50vh | 90vh
     if (offset > vh) {
@@ -29,19 +29,19 @@ export function Header() {
     } else {
       setScrolled(false);
     }
-  };
+  }, [isMediumUp]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [handleScroll]);
 
   return (
     <header
-      className={clsx(
-        'fixed left-0 top-0 z-10 w-full bg-transparent p-4',
-        animationFade,
-      )}
+      className={clsx('fixed left-0 top-0 z-10 w-full p-4', animationFade, {
+        'bg-white': scrolled,
+        'bg-transparent': !scrolled,
+      })}
     >
       <nav className="mx-auto flex flex-wrap items-center justify-between">
         <div className="block lg:hidden">

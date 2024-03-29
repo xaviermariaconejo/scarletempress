@@ -43,8 +43,6 @@ export function Footer() {
           <Link className={linkStyles} href="/cookies-policy">
             Política de cookies
           </Link>
-          <span>|</span>
-          <button className={linkStyles}>Gestionar cookies</button>
         </div>
       </div>
     </footer>
