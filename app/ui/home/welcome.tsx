@@ -13,8 +13,9 @@ export function Welcome() {
       <Image
         alt="Background Image"
         fill
+        priority
         quality={100}
-        src="/background.jpg"
+        src="/home-background.jpg"
         style={{
           opacity: '0.9',
           objectFit: 'cover',
@@ -29,6 +30,8 @@ export function Welcome() {
         <Image
           alt="Scarlet Empress Logo"
           height={196 * 1.25}
+          priority
+          quality={100}
           src="/scarlet-empress-logo.png"
           width={265 * 1.25}
         />

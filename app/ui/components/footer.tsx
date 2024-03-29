@@ -32,15 +32,15 @@ export function Footer() {
           </p>
         </div>
         <div className="mt-4 flex items-center space-x-4">
-          <Link className={linkStyles} href="/legal-notice">
+          <Link className={linkStyles} prefetch={false} href="/legal-notice">
             Aviso Legal
           </Link>
           <span>|</span>
-          <Link className={linkStyles} href="/privacy-policy">
+          <Link className={linkStyles} prefetch={false} href="/privacy-policy">
             Política de privacidad
           </Link>
           <span>|</span>
-          <Link className={linkStyles} href="/cookies-policy">
+          <Link className={linkStyles} prefetch={false} href="/cookies-policy">
             Política de cookies
           </Link>
         </div>
