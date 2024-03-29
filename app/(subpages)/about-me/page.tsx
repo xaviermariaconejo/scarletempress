@@ -18,7 +18,7 @@ export default function AboutMePage() {
   return (
     <main className="container mx-auto flex flex-col items-center justify-between px-12 py-0 xl:p-16">
       <section className="flex flex-col items-center justify-between xl:flex-row">
-        <div className="self-start p-8 xl:w-1/2 xl:pt-16">
+        <div className="self-start py-8 xl:w-1/2 xl:p-8 xl:pt-20">
           <h2 className="mb-8 text-center text-4xl font-semibold">
             ¿Quién es Scarlet Empress?
           </h2>
