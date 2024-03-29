@@ -46,7 +46,8 @@ export default function AboutMePage() {
             width={1600}
           />
         </div>
-        <p className="my-8 block text-center xl:hidden">{TEXT_3}</p>
+        <p className="mb-4 mt-8 block text-center xl:hidden">{TEXT_3}</p>
+        <p className="mb-8 block text-center xl:hidden">{TEXT_4}</p>
         <div className="flex-1 xl:ml-8 xl:max-w-[33.33%]">
           <Image
             alt="Manikin"
@@ -54,16 +55,6 @@ export default function AboutMePage() {
             quality={100}
             src="/manikin-blur.png"
             width={480}
-          />
-        </div>
-        <p className="my-8 block text-center xl:hidden">{TEXT_4}</p>
-        <div className="block flex-1 xl:hidden">
-          <Image
-            alt="Sewing utensils"
-            height={415}
-            quality={100}
-            src="/sewing-utensils.png"
-            width={601}
           />
         </div>
       </section>
