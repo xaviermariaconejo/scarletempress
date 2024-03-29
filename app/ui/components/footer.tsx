@@ -1,5 +1,5 @@
-import { Email } from '@/app/ui/email';
-import { Instagram } from '@/app/ui/instagram';
+import { Email } from '@/app/ui/components/email';
+import { Instagram } from '@/app/ui/components/instagram';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,12 +11,12 @@ const linkStyles = 'hover:text-scarlet-700 text-xs hover:underline';
 
 export function Footer() {
   return (
-    <footer className={clsx('bg-scarlet-100 mt-auto', animationFadeUp)}>
+    <footer className={clsx('mt-auto bg-scarlet-100', animationFadeUp)}>
       <div className="container mx-auto flex flex-col items-center px-5 py-8">
         <div className="flex w-full items-center space-x-2">
-          <div className="border-scarlet-700 my-4 h-1 w-full border-t"></div>
+          <div className="my-4 h-1 w-full border-t border-scarlet-700"></div>
           <Instagram />
-          <div className="border-scarlet-700 my-4 h-1 w-full border-t"></div>
+          <div className="my-4 h-1 w-full border-t border-scarlet-700"></div>
         </div>
         <Email className="mb-4" />
         <div className="flex items-center space-x-2">
@@ -27,7 +27,7 @@ export function Footer() {
             width={50}
             className="rounded-full"
           />
-          <p className="text-xs">
+          <p className="text-sm">
             Copyright © {new Date().getFullYear()} ScarletEmpress
           </p>
         </div>

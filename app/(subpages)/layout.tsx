@@ -1,4 +1,4 @@
-import { Header } from '@/app/ui/header';
+import { Header } from '@/app/ui/components/header';
 
 export default function SubPagesLayout({
   children,
