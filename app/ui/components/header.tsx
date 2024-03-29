@@ -16,10 +16,10 @@ const animationFade =
   'animate-fade animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export function Header({
-  className,
+  className = '',
   isHome = false,
 }: {
-  className: string;
+  className?: string;
   isHome?: boolean;
 }) {
   return (
