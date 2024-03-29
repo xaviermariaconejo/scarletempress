@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export type State = {
-  status?: 'idle' | 'loading' | 'success' | 'error';
+  status: string;
   errors?: {
     name?: string[];
     email?: string[];

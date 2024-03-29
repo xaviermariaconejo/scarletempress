@@ -8,7 +8,7 @@ const inputStyles =
   'border-scarlet-500 placeholder-gray-dark focus:border-scarlet-800 rounded-full border-2 px-4 py-2 focus:shadow-none focus:outline-none focus:ring-0';
 
 export function ContactForm() {
-  const initialState = { status: 'idle', message: null, errors: {} };
+  const initialState: State = { status: 'idle', message: null, errors: {} };
   const [state, dispatch] = useFormState(sendContactEmail, initialState);
 
   return (
@@ -71,13 +71,14 @@ export function ContactToSubmitForm({ state }: { state: State }) {
             <p className="mt-2 text-sm text-error">{state.message}</p>
             {state.errors && (
               <ul className="ml-8 mt-2 list-disc text-sm text-error">
-                {Object.keys(state.errors).map((fieldName) =>
-                  state.errors[fieldName].map(
-                    (error: string, index: number) => (
-                      <li key={`${fieldName}-${index}`}>{error}</li>
+                {state.errors &&
+                  Object.keys(state.errors).map((fieldName) =>
+                    state.errors[fieldName].map(
+                      (error: string, index: number) => (
+                        <li key={`${fieldName}-${index}`}>{error}</li>
+                      ),
                     ),
-                  ),
-                )}
+                  )}
               </ul>
             )}
           </div>

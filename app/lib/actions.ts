@@ -36,7 +36,7 @@ export async function sendContactEmail(prevState: State, formData: FormData) {
     //   react: ContactEmailTemplate({ email, fullName, message }),
     // });
 
-    return { status: 'success' };
+    return { status: 'success', message: null };
   } catch (error) {
     return {
       status: 'error',

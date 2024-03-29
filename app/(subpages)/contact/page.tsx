@@ -15,7 +15,7 @@ export default function ContactPage() {
   return (
     <main
       className={clsx(
-        'container mx-auto flex flex-col bg-white md:px-12 md:py-24 lg:flex-row',
+        'container mx-auto flex flex-col bg-white md:px-12 md:py-20 lg:flex-row',
         animationFadeUp,
       )}
     >
