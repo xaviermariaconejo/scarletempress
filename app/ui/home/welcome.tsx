@@ -8,7 +8,7 @@ const animationFadeUp =
 export function Welcome() {
   return (
     <section
-      className={`justify-stat relative flex h-screen w-full flex-col items-center overflow-hidden p-10 pb-[120px] md:h-[60dvh] md:pt-16`}
+      className={`justify-stat screen relative flex h-[100dvh] w-full flex-col items-center overflow-hidden p-10 pb-[120px] md:h-[60dvh] md:pt-16`}
     >
       <Image
         alt="Background Image"
