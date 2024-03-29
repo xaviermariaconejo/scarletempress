@@ -28,13 +28,12 @@ export async function sendContactEmail(prevState: State, formData: FormData) {
   const fullName = surname ? `${name} ${surname}` : name;
 
   try {
-    await new Promise((resolve) => setTimeout(resolve, 4000));
-    // await resend.emails.send({
-    //   from: 'Contacto Web <contact@scarletempress.com>',
-    //   to: ['info@scarletempress.com'],
-    //   subject: `Contacto Web: ${fullName}`,
-    //   react: ContactEmailTemplate({ email, fullName, message }),
-    // });
+    await resend.emails.send({
+      from: 'Contacto Web <contact@scarletempress.com>',
+      to: ['info@scarletempress.com'],
+      subject: `Contacto Web: ${fullName}`,
+      react: ContactEmailTemplate({ email, fullName, message }),
+    });
 
     return { status: 'success', message: null };
   } catch (error) {
