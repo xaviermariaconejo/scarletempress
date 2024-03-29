@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { Instagram } from '@/app/ui/components/instagram';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
+import { useMatchMedia } from '@/app/lib/hooks';
+import { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
@@ -16,12 +17,13 @@ const animationFade =
   'animate-fade animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export function Header() {
+  const isMediumUp = useMatchMedia('(min-width: 768px)');
   const [scrolled, setScrolled] = useState(false);
 
   // Manejar el cambio de color basado en la posición de desplazamiento
   const handleScroll = () => {
     const offset = window.scrollY;
-    const vh = window.innerHeight * 0.5; // 50vh
+    const vh = isMediumUp ? window.innerHeight * 0.5 : window.innerHeight * 0.9; // 50vh | 90vh
     if (offset > vh) {
       setScrolled(true);
     } else {
@@ -43,7 +45,7 @@ export function Header() {
     >
       <nav className="mx-auto flex flex-wrap items-center justify-between">
         <div className="block lg:hidden">
-          <MobileMenu />
+          <MobileMenu scrolled={scrolled} />
         </div>
         <div className="hidden items-center justify-start lg:flex lg:w-1/3">
           <ul className="flex justify-between space-x-4">
@@ -78,7 +80,7 @@ export function Header() {
   );
 }
 
-export function MobileMenu() {
+export function MobileMenu({ scrolled }: { scrolled: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -86,7 +88,9 @@ export function MobileMenu() {
       {/* Icono del menú hamburguesa */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 hover:text-scarlet-700"
+        className={clsx('p-2 hover:text-scarlet-700', {
+          'text-white': !scrolled,
+        })}
       >
         <RxHamburgerMenu className="h-6 w-6" />
       </button>
