@@ -7,7 +7,7 @@ import Link from 'next/link';
 const animationFadeUp =
   'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
-const linkStyles = 'hover:text-scarlet-700 text-xs hover:underline';
+const linkStyles = 'hover:text-scarlet-700 text-xs text-center hover:underline';
 
 export function Footer() {
   return (
