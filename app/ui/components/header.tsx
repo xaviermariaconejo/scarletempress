@@ -15,39 +15,57 @@ const links = [
 const animationFade =
   'animate-fade animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
-export function Header() {
+export function Header({
+  className,
+  isHome = false,
+}: {
+  className: string;
+  isHome?: boolean;
+}) {
   return (
     <header
       className={clsx(
-        'sticky left-0 top-0 z-10 w-full bg-white p-4',
+        'left-0 top-0 z-10 w-full p-4',
+        {
+          'fixed bg-transparent': isHome,
+          'sticky bg-white': !isHome,
+        },
         animationFade,
+        className,
       )}
     >
       <nav className="mx-auto flex flex-wrap items-center justify-between">
         <div className="block lg:hidden">
           <MobileMenu />
         </div>
-        <div className="hidden items-center justify-start lg:flex lg:w-1/3">
-          <ul className="flex justify-between space-x-4">
-            {links.map((link) => {
-              return (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="border-b border-transparent hover:border-scarlet-700 hover:text-scarlet-700"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        <Link href="/" className="flex items-center lg:w-1/3 lg:justify-center">
-          <span className="self-center whitespace-nowrap border-b border-transparent text-xl font-semibold hover:border-scarlet-700 hover:text-scarlet-700">
-            Scarlet Empress
-          </span>
-        </Link>
+        {!isHome && (
+          <div className="hidden items-center justify-start lg:flex lg:w-1/3">
+            <ul className="flex justify-between space-x-4">
+              {links.map((link) => {
+                return (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="border-b border-transparent hover:border-scarlet-700 hover:text-scarlet-700"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
+        {!isHome && (
+          <Link
+            href="/"
+            className="flex items-center lg:w-1/3 lg:justify-center"
+          >
+            <span className="self-center whitespace-nowrap border-b border-transparent text-xl font-semibold hover:border-scarlet-700 hover:text-scarlet-700">
+              Scarlet Empress
+            </span>
+          </Link>
+        )}
         <div className="flex items-center justify-end lg:w-1/3">
           <Instagram />
         </div>
