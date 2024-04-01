@@ -1,6 +1,8 @@
 import { ContactForm } from '@/app/ui/contact/form';
 import { Email } from '@/app/ui/components/email';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { getTranslations } from '@/app/lib/locales';
+import { Lang } from '@/app/lib/definitions';
 import { Metadata } from 'next';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -12,7 +14,13 @@ export const metadata: Metadata = {
 const animationFadeUp =
   'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
-export default function ContactPage() {
+export default async function ContactPage({
+  params: { lang },
+}: {
+  params: { lang: Lang };
+}) {
+  const t = await getTranslations(lang);
+
   return (
     <main
       className={clsx(
@@ -22,7 +30,7 @@ export default function ContactPage() {
     >
       <div className="flex flex-col lg:flex-row">
         <div className="p-8 pb-5 sm:pb-8 lg:w-1/2">
-          <h2 className="mb-6 text-2xl font-semibold">Contáctame</h2>
+          <h2 className="mb-6 text-2xl font-semibold">{t.CONTACT.TITLE}</h2>
           <p className="mb-4">
             Contáctame para consultas sobre diseños personalizados, ajustes y
             transformaciones de tus trajes y vestidos. ¡Estoy aquí para

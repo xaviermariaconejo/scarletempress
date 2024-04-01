@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { WEBSITE_URL, SUPPORT_EMAIL } from '@/app/lib/constants';
 import clsx from 'clsx';
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function Page() {
       <h1 className="mb-4 text-center text-3xl font-bold">
         POLÍTICA DE PRIVACIDAD DEL SITIO WEB
       </h1>
-      <p className="mb-8 text-center">www.scarletempress.com</p>
+      <p className="mb-8 text-center">{WEBSITE_URL}</p>
 
       <section className="mb-8">
         <h2 className="mb-3 text-2xl font-semibold">
@@ -73,7 +74,7 @@ export default function Page() {
           <ul className="ml-8 mt-2 list-disc">
             <li>{"Dirección: Passatge d'Aloi, 1, Entresuelo, 3"}</li>
             <li>Teléfono de contacto: +34 625 90 70 43</li>
-            <li>Email de contacto: info@scarletempress.com</li>
+            <li>Email de contacto: {SUPPORT_EMAIL}</li>
           </ul>
         </article>
 
@@ -374,9 +375,7 @@ export default function Page() {
             </li>
           </ul>
           <p className="mt-4">
-            {
-              'Así pues, el Usuario podrá ejercitar sus derechos mediante comunicación escrita dirigida al Responsable del tratamiento con la referencia "RGPD-www.scarletempress.com", especificando:'
-            }
+            {`Así pues, el Usuario podrá ejercitar sus derechos mediante comunicación escrita dirigida al Responsable del tratamiento con la referencia "RGPD-${WEBSITE_URL}", especificando:`}
           </p>
           <ul className="ml-8 mt-2 list-disc">
             <li>
@@ -401,7 +400,7 @@ export default function Page() {
           </p>
           <ul className="ml-8 mt-2 list-disc">
             <li>{"Dirección: Passatge d'Aloi, 1, Entresuelo, 3"}</li>
-            <li>Correo electrónico: info@scarletempress.com</li>
+            <li>Correo electrónico: {SUPPORT_EMAIL}</li>
           </ul>
         </article>
 

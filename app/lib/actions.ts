@@ -1,6 +1,7 @@
 'use server';
 
 import { ContactEmailTemplate } from '@/app/ui/contact/email-template';
+import { SUPPORT_EMAIL } from '@/app/lib/constants';
 import { Resend } from 'resend';
 import { State, FormSchema } from '@/app/lib/definitions';
 
@@ -33,7 +34,7 @@ export async function sendContactEmail(
   try {
     await resend.emails.send({
       from: 'Contacto Web <contact@scarletempress.com>',
-      to: ['info@scarletempress.com'],
+      to: [SUPPORT_EMAIL],
       subject: `Contacto Web: ${fullName}`,
       react: ContactEmailTemplate({ email, fullName, message }),
     });

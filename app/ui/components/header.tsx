@@ -1,8 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { getLangFromPathname } from '@/app/lib/utils';
 import { Instagram } from '@/app/ui/components/instagram';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
@@ -16,6 +18,9 @@ const animationFade =
   'animate-fade animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export function Header() {
+  const pathname = usePathname();
+  const lang = getLangFromPathname(pathname);
+
   return (
     <header
       className={clsx(
@@ -33,7 +38,7 @@ export function Header() {
               return (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    href={`/${lang}${link.href}`}
                     className="border-b border-transparent hover:border-scarlet-700 hover:text-scarlet-700"
                   >
                     {link.name}
@@ -43,7 +48,10 @@ export function Header() {
             })}
           </ul>
         </div>
-        <Link href="/" className="flex items-center lg:w-1/3 lg:justify-center">
+        <Link
+          href={`/${lang}`}
+          className="flex items-center lg:w-1/3 lg:justify-center"
+        >
           <span className="self-center whitespace-nowrap border-b border-transparent text-xl font-semibold hover:border-scarlet-700 hover:text-scarlet-700">
             Scarlet Empress
           </span>
@@ -57,6 +65,7 @@ export function Header() {
 }
 
 export function MobileMenu() {
+  const lang = getLangFromPathname(usePathname());
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -94,7 +103,7 @@ export function MobileMenu() {
             return (
               <Link
                 key={link.name}
-                href={link.href}
+                href={`/${lang}${link.href}`}
                 onClick={() => setIsOpen(false)}
                 className="w-auto border-b border-transparent hover:border-scarlet-700 hover:text-scarlet-700"
               >

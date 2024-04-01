@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { WEBSITE_URL, SUPPORT_EMAIL } from '@/app/lib/constants';
 import clsx from 'clsx';
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function Page() {
       <h1 className="mb-4 text-center text-3xl font-bold">
         AVISO LEGAL Y CONDICIONES GENERALES DE USO
       </h1>
-      <p className="mb-8 text-center">www.scarletempress.com</p>
+      <p className="mb-8 text-center">{WEBSITE_URL}</p>
 
       <section className="mb-8">
         <h2 className="mb-3 text-2xl font-semibold">I. INFORMACIÓN GENERAL</h2>
@@ -25,14 +26,14 @@ export default function Page() {
           siguientes datos de información general de este sitio web:
         </p>
         <p className="mt-4">
-          La titularidad de este sitio web, www.scarletempress.com, (en
-          adelante, Sitio Web) la ostenta: Marta Alcaide Lorca, con NIF:
-          50344756-X, y cuyos datos de contacto son:
+          La titularidad de este sitio web, {WEBSITE_URL}, (en adelante, Sitio
+          Web) la ostenta: Marta Alcaide Lorca, con NIF: 50344756-X, y cuyos
+          datos de contacto son:
         </p>
         <ul className="ml-8 mt-2 list-disc">
           <li>{"Dirección: Passatge d'Aloi, 1, Entresuelo, 3"}</li>
           <li>Teléfono de contacto: +34 625 90 70 43</li>
-          <li>Email de contacto: info@scarletempress.com</li>
+          <li>Email de contacto: {SUPPORT_EMAIL}</li>
         </ul>
       </section>
 

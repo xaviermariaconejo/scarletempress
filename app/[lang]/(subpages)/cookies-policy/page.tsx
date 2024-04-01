@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { WEBSITE_URL } from '@/app/lib/constants';
 import clsx from 'clsx';
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function Page() {
       <h1 className="mb-4 text-center text-3xl font-bold">
         POLÍTICA DE COOKIES
       </h1>
-      <p className="mb-8 text-center">www.scarletempress.com</p>
+      <p className="mb-8 text-center">{WEBSITE_URL}</p>
 
       <section className="mb-8">
         <p>

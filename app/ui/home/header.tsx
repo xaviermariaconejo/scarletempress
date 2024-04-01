@@ -1,9 +1,11 @@
 'use client';
 
+import { getLangFromPathname } from '@/app/lib/utils';
 import { Instagram } from '@/app/ui/components/instagram';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
-import { useMatchMedia } from '@/app/lib/hooks';
-import { useCallback, useEffect, useState } from 'react';
+import { useMedia, useWindowScroll } from 'react-use';
+import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
@@ -17,24 +19,14 @@ const animationFade =
   'animate-fade animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export function Header() {
-  const isMediumUp = useMatchMedia('(min-width: 768px)');
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const lang = getLangFromPathname(pathname);
 
-  // Manejar el cambio de color basado en la posición de desplazamiento
-  const handleScroll = useCallback(() => {
-    const offset = window.scrollY;
-    const vh = isMediumUp ? window.innerHeight * 0.5 : window.innerHeight * 0.9; // 50vh | 90vh
-    if (offset > vh) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  }, [isMediumUp]);
+  const offset = useWindowScroll();
+  const isMediumUp = useMedia('(min-width: 768px)');
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+  const vh = isMediumUp ? window.innerHeight * 0.5 : window.innerHeight * 0.9; // 50vh | 90vh
+  const scrolled = offset.y > vh;
 
   return (
     <header
@@ -53,7 +45,7 @@ export function Header() {
               return (
                 <li key={link.name}>
                   <Link
-                    href={link.href}
+                    href={`/${lang}${link.href}`}
                     className={clsx(
                       'border-b border-transparent  hover:border-scarlet-700 hover:text-scarlet-700',
                       {
@@ -81,6 +73,8 @@ export function Header() {
 }
 
 export function MobileMenu({ scrolled }: { scrolled: boolean }) {
+  const pathname = usePathname();
+  const lang = getLangFromPathname(pathname);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -120,7 +114,7 @@ export function MobileMenu({ scrolled }: { scrolled: boolean }) {
             return (
               <Link
                 key={link.name}
-                href={link.href}
+                href={`/${lang}${link.href}`}
                 onClick={() => setIsOpen(false)}
                 className="w-auto border-b border-transparent hover:border-scarlet-700 hover:text-scarlet-700"
               >

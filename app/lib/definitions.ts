@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+export type Lang = 'en' | 'es' | 'fr' | 'de' | 'it';
+
 export type State = {
   status: 'success' | 'error' | 'idle' | 'pending';
   errors?: {
