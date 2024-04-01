@@ -3,9 +3,9 @@
 import { getLangFromPathname } from '@/app/lib/utils';
 import { Instagram } from '@/app/ui/components/instagram';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
-import { useMedia, useWindowScroll } from 'react-use';
+import { useMedia } from 'react-use';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
@@ -22,11 +22,24 @@ export function Header() {
   const pathname = usePathname();
   const lang = getLangFromPathname(pathname);
 
-  const offset = useWindowScroll();
   const isMediumUp = useMedia('(min-width: 768px)');
+  const [scrolled, setScrolled] = useState(false);
 
-  const vh = isMediumUp ? window.innerHeight * 0.5 : window.innerHeight * 0.9; // 50vh | 90vh
-  const scrolled = offset.y > vh;
+  // Manejar el cambio de color basado en la posición de desplazamiento
+  const handleScroll = useCallback(() => {
+    const offset = window.scrollY;
+    const vh = isMediumUp ? window.innerHeight * 0.5 : window.innerHeight * 0.9; // 50vh | 90vh
+    if (offset > vh) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  }, [isMediumUp]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   return (
     <header

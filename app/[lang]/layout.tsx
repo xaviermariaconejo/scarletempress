@@ -1,6 +1,6 @@
 import { Footer } from '@/app/ui/components/footer';
 import { Lang } from '@/app/lib/definitions';
-import { LOCALES } from '@/app/lib/constants';
+import { LOCALES, WEBSITE_URL } from '@/app/lib/constants';
 import { Metadata } from 'next';
 import { poppins } from '@/app/ui/fonts';
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     default: 'Scarlet Empress',
   },
   description: 'The official Scarlet Empress Website.',
-  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+  metadataBase: new URL(`https://${WEBSITE_URL}`),
 };
 
 export default function RootLayout({
