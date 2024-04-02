@@ -1,8 +1,8 @@
 'use client';
 
 import { sendContactEmail } from '@/app/lib/actions';
-import { useFormState, useFormStatus } from 'react-dom';
 import { State } from '@/app/lib/definitions';
+import { useFormState, useFormStatus } from 'react-dom';
 
 const inputStyles =
   'border-scarlet-500 placeholder-gray-dark focus:border-scarlet-800 rounded-full border-2 px-4 py-2 focus:shadow-none focus:outline-none focus:ring-0';

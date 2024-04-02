@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
-import { WEBSITE_URL, SUPPORT_EMAIL } from '@/app/lib/constants';
+import { SUPPORT_EMAIL, WEBSITE_URL } from '@/app/lib/constants';
 import clsx from 'clsx';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidad',

@@ -29,16 +29,16 @@ const config: Config = {
           DEFAULT: '#FFFFFF',
           dark: '#F0F0F0',
         },
-        // accent
-        blue: '#003366',
-        orange: '#FFA07A',
         // neutral
         gray: {
-          // secondary
           light: '#E0E0E0',
           DEFAULT: '#CCCCCC',
           dark: '#333333',
         },
+        // social
+        etsy: '#F16521',
+        whatsapp: '#25D366',
+        facebook: '#3b5998',
         // error
         error: '#D8000C',
         // success

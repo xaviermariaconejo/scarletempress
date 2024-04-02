@@ -1,4 +1,4 @@
-import { Poppins, Great_Vibes } from 'next/font/google';
+import { Great_Vibes, Poppins } from 'next/font/google';
 
 export const poppins = Poppins({
   style: ['normal'],

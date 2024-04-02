@@ -1,13 +1,16 @@
 'use client';
 
+import { Locale } from '@/app/lib/definitions';
 import { getLangFromPathname } from '@/app/lib/utils';
+import { Etsy } from '@/app/ui/components/etsy';
 import { Instagram } from '@/app/ui/components/instagram';
-import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
-import { useMedia } from 'react-use';
-import { usePathname } from 'next/navigation';
-import { useCallback, useEffect, useState } from 'react';
+import { LanguageSelector } from '@/app/ui/components/languageSelector';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useCallback, useEffect, useState } from 'react';
+import { RxCross1, RxHamburgerMenu } from 'react-icons/rx';
+import { useMedia } from 'react-use';
 
 const links = [
   { name: 'Servicios', href: '/services' },
@@ -18,7 +21,7 @@ const links = [
 const animationFade =
   'animate-fade animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
-export function Header() {
+export function Header({ t }: { t: Locale }) {
   const pathname = usePathname();
   const lang = getLangFromPathname(pathname);
 
@@ -48,7 +51,7 @@ export function Header() {
         'bg-transparent': !scrolled,
       })}
     >
-      <nav className="mx-auto flex flex-wrap items-center justify-between">
+      <nav className="mx-auto flex flex-wrap items-start sm:items-center justify-between">
         <div className="block lg:hidden">
           <MobileMenu scrolled={scrolled} />
         </div>
@@ -74,10 +77,15 @@ export function Header() {
           </ul>
         </div>
         <div
-          className={clsx('flex items-center justify-end lg:w-1/3', {
-            'text-white': !scrolled,
-          })}
+          className={clsx(
+            'flex items-center justify-end sm:space-y-0 space-y-2 sm:space-x-2 lg:w-1/3 sm:flex-row flex-col',
+            {
+              'text-white': !scrolled,
+            },
+          )}
         >
+          <LanguageSelector t={t} />
+          <Etsy />
           <Instagram />
         </div>
       </nav>

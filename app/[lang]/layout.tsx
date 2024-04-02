@@ -1,10 +1,9 @@
-import { Footer } from '@/app/ui/components/footer';
-import { Lang } from '@/app/lib/definitions';
 import { LOCALES, WEBSITE_URL } from '@/app/lib/constants';
-import { Metadata } from 'next';
+import { Lang } from '@/app/lib/definitions';
+import { Footer } from '@/app/ui/components/footer';
 import { poppins } from '@/app/ui/fonts';
-
 import '@/app/ui/global.css';
+import { Metadata } from 'next';
 
 export async function generateStaticParams() {
   return LOCALES.map((lang) => ({ lang }));

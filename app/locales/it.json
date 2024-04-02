@@ -1,4 +1,11 @@
 {
+  "LANGUAGES": {
+    "es": "Español",
+    "en": "English",
+    "de": "Deutsch",
+    "it": "Italiano",
+    "fr": "Français"
+  },
   "CONTACT": {
     "TITLE": "Contáctame"
   }

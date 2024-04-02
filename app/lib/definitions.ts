@@ -16,3 +16,16 @@ export const FormSchema = z.object({
   email: z.string().email('Debe proporcionar un email válido'),
   message: z.string().min(1, 'El mensaje no puede estar vacío'),
 });
+
+export type Locale = {
+  LANGUAGES: {
+    es: string;
+    en: string;
+    it: string;
+    fr: string;
+    de: string;
+  };
+  CONTACT: {
+    TITLE: string;
+  };
+};

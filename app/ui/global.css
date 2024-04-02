@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~flag-icons/css/flag-icons.min.css";
+
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;

@@ -1,9 +1,9 @@
 'use server';
 
-import { ContactEmailTemplate } from '@/app/ui/contact/email-template';
 import { SUPPORT_EMAIL } from '@/app/lib/constants';
+import { FormSchema, State } from '@/app/lib/definitions';
+import { ContactEmailTemplate } from '@/app/ui/contact/email-template';
 import { Resend } from 'resend';
-import { State, FormSchema } from '@/app/lib/definitions';
 
 export async function sendContactEmail(
   prevState: State,

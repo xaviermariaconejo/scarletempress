@@ -1,6 +1,6 @@
-import { FaEnvelope } from 'react-icons/fa';
 import { SUPPORT_EMAIL } from '@/app/lib/constants';
 import clsx from 'clsx';
+import { FaEnvelope } from 'react-icons/fa';
 
 export function Email({ className = '' }: { className?: string }) {
   return (

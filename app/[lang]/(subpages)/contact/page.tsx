@@ -1,11 +1,11 @@
-import { ContactForm } from '@/app/ui/contact/form';
-import { Email } from '@/app/ui/components/email';
-import { FaMapMarkerAlt } from 'react-icons/fa';
-import { getTranslations } from '@/app/lib/locales';
 import { Lang } from '@/app/lib/definitions';
-import { Metadata } from 'next';
+import { getTranslations } from '@/app/lib/locales';
+import { Email } from '@/app/ui/components/email';
+import { ContactForm } from '@/app/ui/contact/form';
 import clsx from 'clsx';
+import { Metadata } from 'next';
 import Image from 'next/image';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 export const metadata: Metadata = {
   title: 'Contact',

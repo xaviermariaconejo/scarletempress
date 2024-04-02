@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
 import { WEBSITE_URL } from '@/app/lib/constants';
 import clsx from 'clsx';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Política de Cookies',

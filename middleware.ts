@@ -1,7 +1,7 @@
 import { DEFAULT_LOCALE, LOCALES } from '@/app/lib/constants';
 import { match } from '@formatjs/intl-localematcher';
-import { NextResponse, NextRequest } from 'next/server';
 import Negotiator from 'negotiator';
+import { NextRequest, NextResponse } from 'next/server';
 
 function getLocale(request: NextRequest) {
   const acceptedLanguage = request.headers.get('accept-language') ?? undefined;
