@@ -54,7 +54,7 @@ export function LanguageSelector({ t }: { t: Locale }) {
           {LOCALES.map((locale: Lang) => (
             <li
               key={locale}
-              className="block px-4 py-2 first:pt-3 cursor-pointer last:pb-3 hover:text-scarlet-400 hover:bg-scarlet-100"
+              className="block text-gray-dark px-4 py-2 first:pt-3 cursor-pointer last:pb-3 hover:text-scarlet-400 hover:bg-scarlet-100"
               onClick={() => handleClick(locale)}
             >
               <span className={`mr-2 fi fi-${FLAGS[locale]}`}></span>

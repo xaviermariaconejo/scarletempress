@@ -1,4 +1,4 @@
-import { Locale } from '@/app/lib/definitions';
+import { Lang, Locale } from '@/app/lib/definitions';
 import 'server-only';
 
 const locales = {
@@ -9,6 +9,5 @@ const locales = {
   it: () => import('@/app/locales/it.json').then((module) => module.default),
 };
 
-export const getTranslations = async (
-  locale: keyof typeof locales,
-): Promise<Locale> => locales[locale]();
+export const getTranslations = async (locale: Lang): Promise<Locale> =>
+  locales[locale]();
