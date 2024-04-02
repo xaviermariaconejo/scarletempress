@@ -42,7 +42,7 @@ export function LanguageSelector({ t }: { t: Locale }) {
         className="flex items-center justify-between bg-transparent hover:text-scarlet-700 w-auto md:mr-2"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className={`mr-1 fi fi-${FLAGS[lang]}`}></span>
+        <span className={`sm:mr-1 fi fi-${FLAGS[lang]}`}></span>
         <span className="hidden md:block">{t.LANGUAGES[lang]}</span>
         <IoIosArrowDown className="hidden md:block" />
       </button>
