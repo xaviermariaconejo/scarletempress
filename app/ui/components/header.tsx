@@ -31,7 +31,7 @@ export function Header({ t }: { t: Locale }) {
         animationFade,
       )}
     >
-      <nav className="mx-auto flex flex-wrap items-start sm:items-center justify-between">
+      <nav className="mx-auto flex flex-wrap items-center justify-between">
         <div className="block lg:hidden">
           <MobileMenu />
         </div>
