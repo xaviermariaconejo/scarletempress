@@ -59,7 +59,7 @@ export function Header({ t }: { t: Locale }) {
             Scarlet Empress
           </span>
         </Link>
-        <div className="flex items-center justify-end sm:space-y-0 space-y-2 sm:space-x-2 lg:w-1/3 sm:flex-row flex-col">
+        <div className="flex items-center justify-end space-x-2 lg:w-1/3">
           <LanguageSelector t={t} />
           <Etsy />
           <Instagram />

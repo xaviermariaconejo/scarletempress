@@ -77,12 +77,9 @@ export function Header({ t }: { t: Locale }) {
           </ul>
         </div>
         <div
-          className={clsx(
-            'flex items-center justify-end sm:space-y-0 space-y-2 sm:space-x-2 lg:w-1/3 sm:flex-row flex-col',
-            {
-              'text-white': !scrolled,
-            },
-          )}
+          className={clsx('flex items-center justify-end space-x-2 lg:w-1/3', {
+            'text-white': !scrolled,
+          })}
         >
           <LanguageSelector t={t} />
           <Etsy />

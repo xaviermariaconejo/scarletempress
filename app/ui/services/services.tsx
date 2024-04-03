@@ -53,7 +53,7 @@ export function Services({ t }: { t: Locale }) {
         <div className="relative flex flex-col items-center justify-center">
           <div className="flex flex-col sm:flex-row items-center sm:items-start w-full justify-around mb-8 lg:space-x-0 sm:space-x-4 sm:space-y-0 space-y-4">
             <ExpandableText
-              className="lg:absolute top-0 left-0 w-full max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
+              className="lg:absolute top-0 left-0 w-full max-w-[320px] sm:max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
               title="Calidad al Detalle en cada Encargo"
               content="Cada pieza que creo es más
               que una prenda; es una obra de arte personalizada. Me comprometo a
@@ -62,7 +62,7 @@ export function Services({ t }: { t: Locale }) {
               entregar prendas que superen tus expectativas en cada encargo."
             />
             <ExpandableText
-              className="lg:absolute top-0 right-0 w-full max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
+              className="lg:absolute top-0 right-0 w-full max-w-[320px] sm:max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
               title="Diseño Personalizado para Ti"
               content="Cada diseño comienza
               contigo. Me dedico a crear prendas que reflejen tu estilo único y
@@ -81,7 +81,7 @@ export function Services({ t }: { t: Locale }) {
           />
           <div className="flex sm:flex-row flex-col items-center sm:items-start w-full justify-around mt-8 sm:space-x-4 lg:space-x-0 sm:space-y-0 space-y-4">
             <ExpandableText
-              className="lg:absolute top-2/3 left-0 w-full max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
+              className="lg:absolute top-2/3 left-0 w-full max-w-[320px] sm:max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
               title="Calidad Inigualable en la Confección"
               content="En cada prenda que creo, persigo la excelencia en calidad y artesanía. Utilizo
               los mejores materiales y técnicas de confección para garantizar
@@ -89,7 +89,7 @@ export function Services({ t }: { t: Locale }) {
               la diferencia de la verdadera calidad en cada costura."
             />
             <ExpandableText
-              className="lg:absolute top-2/3 right-0 w-full max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
+              className="lg:absolute top-2/3 right-0 w-full max-w-[320px] sm:max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
               title="Encargos para todas las Épocas"
               content="Me apasiona la diversidad y la creatividad en mis diseños. Desde trajes de
               fantasía medieval hasta diseños inspirados en el steampunk y más
@@ -102,7 +102,7 @@ export function Services({ t }: { t: Locale }) {
         </div>
         <div className="min-h-0 sm:min-h-[212px] items-start mt-4 sm:mt-8 lg:mt-20 flex flex-col sm:flex-row sm:space-x-4 lg:space-x-12 space-y-4 sm:space-y-0">
           <ExpandableText
-            className="text-center w-96 font-medium"
+            className="text-center w-[320px] sm:w-96 font-medium"
             title="Excepcional servicio al Cliente"
             content="Tu opinión es lo más importante para mí. Desde la consulta inicial hasta la entrega
             final, te mantengo informado y te hago sentir parte del proceso en
@@ -110,7 +110,7 @@ export function Services({ t }: { t: Locale }) {
             por superar tus expectativas en cada paso del camino."
           />
           <ExpandableText
-            className="text-center w-96 font-medium"
+            className="text-center w-[320px] sm:w-96 font-medium"
             title="Selección al Detalle de Telas"
             content="La elección de las telas
             es fundamental para la calidad y el estilo de una prenda. Ofrezco
