@@ -25,7 +25,12 @@ export function Header({ t }: { t: Locale }) {
   const lang = getLangFromPathname(pathname);
 
   return (
-    <header className={clsx('left-0 top-0 z-10 w-full p-4', animationFade)}>
+    <header
+      className={clsx(
+        'left-0 top-0 z-10 w-full p-4 sticky bg-white',
+        animationFade,
+      )}
+    >
       <nav className="mx-auto flex flex-wrap items-start sm:items-center justify-between">
         <div className="block lg:hidden">
           <MobileMenu />
