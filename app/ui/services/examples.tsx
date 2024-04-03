@@ -9,7 +9,7 @@ export function Examples({ t }: { t: Locale }) {
   return (
     <section
       className={clsx(
-        `justify-start flex w-full flex-col items-center p-12 container mx-auto md:pt-4`,
+        `justify-start flex w-full flex-col items-center p-12 container mx-auto pt-4`,
         animationFadeUp,
       )}
     >

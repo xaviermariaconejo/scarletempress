@@ -35,7 +35,7 @@ export function Services({ t }: { t: Locale }) {
           />
         </div>
         <div className="relative z-10 text-center p-8 md:p-12 md:w-[500px] mx-auto md:pt-20 pt-20">
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl font-semibold">
             Desde el boceto de tu sueño hasta la realidad de tu armario
           </h1>
           <p className="mt-4 text-xl font-semibold">
