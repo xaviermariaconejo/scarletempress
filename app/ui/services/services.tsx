@@ -46,7 +46,7 @@ export function Services({ t }: { t: Locale }) {
       </section>
       <section
         className={clsx(
-          'justify-start relative flex w-full flex-col items-center p-8 md:p-12 md:pt-0',
+          'justify-start relative flex w-full flex-col items-center p-8 md:p-12 md:pt-0 container mx-auto',
           animationFadeUp,
         )}
       >
