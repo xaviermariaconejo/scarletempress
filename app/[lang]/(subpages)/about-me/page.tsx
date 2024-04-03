@@ -1,9 +1,13 @@
+import clsx from 'clsx';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About Me',
 };
+
+const animationFadeUp =
+  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 const TEXT_1 =
   '¡Hola! Soy Marta. Llevo cosiendo desde hace 14 años. Por supuesto no todos esos años han sido de manera profesional, pero me ayudaron a asentar las bases y a poder aprovechar al máximo mi formación. He estudiado Vestuario y Alta costura, donde aprendí patronaje a medida, historia de la moda, sastrería... Todo ello hizo más fácil prepararme en patronaje digital e industrial.';
@@ -16,7 +20,12 @@ const TEXT_4 =
 
 export default function AboutMePage() {
   return (
-    <main className="container mx-auto flex flex-col items-center justify-between px-12 py-0 xl:p-16">
+    <main
+      className={clsx(
+        'container mx-auto flex flex-col items-center justify-between px-12 py-0 xl:p-16',
+        animationFadeUp,
+      )}
+    >
       <section className="flex flex-col items-center justify-between xl:flex-row">
         <div className="self-start py-8 xl:w-1/2 xl:p-8 xl:pt-20">
           <h2 className="mb-8 text-center text-4xl font-semibold">

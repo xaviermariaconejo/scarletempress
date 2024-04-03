@@ -9,10 +9,10 @@ const animationFadeUp =
 export function Welcome({ lang }: { lang: Lang }) {
   return (
     <section
-      className={`justify-stat screen relative flex h-[100dvh] w-full flex-col items-center overflow-hidden p-10 pb-[120px] md:h-[60dvh] md:pt-16`}
+      className={`justify-start relative flex h-[100dvh] w-full flex-col items-center overflow-hidden p-10 pb-[120px] md:h-[60dvh] md:pt-16`}
     >
       <Image
-        alt="Background Image"
+        alt="Home background image"
         fill
         priority
         quality={100}
@@ -39,7 +39,7 @@ export function Welcome({ lang }: { lang: Lang }) {
       </div>
       <p
         className={clsx(
-          'md:text-2x mt-6 w-full text-center text-3xl font-bold text-white md:w-1/3',
+          'mt-6 w-full text-center text-3xl font-bold text-white md:w-1/3',
           animationFadeUp,
         )}
       >

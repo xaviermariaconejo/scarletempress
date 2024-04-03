@@ -9,5 +9,9 @@ const locales = {
   it: () => import('@/app/locales/it.json').then((module) => module.default),
 };
 
-export const getTranslations = async (locale: Lang): Promise<Locale> =>
-  locales[locale]();
+export const getTranslations = async (locale: Lang): Promise<Locale> => {
+  if (!locales[locale]) {
+    throw new Error(`Unsupported locale: ${locale}`);
+  }
+  return locales[locale]();
+};

@@ -31,7 +31,7 @@ export default function Page() {
           datos de contacto son:
         </p>
         <ul className="ml-8 mt-2 list-disc">
-          <li>{"Dirección: Passatge d'Aloi, 1, Entresuelo, 3"}</li>
+          <li>&quot;Dirección: Passatge d&apos;Aloi, 1, Entresuelo, 3&quot;</li>
           <li>Teléfono de contacto: +34 625 90 70 43</li>
           <li>Email de contacto: {SUPPORT_EMAIL}</li>
         </ul>

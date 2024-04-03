@@ -15,11 +15,11 @@ const animationFadeUp =
   'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export default async function ContactPage({
-  params: { lang },
+  params,
 }: {
   params: { lang: Lang };
 }) {
-  const t = await getTranslations(lang);
+  const t = await getTranslations(params.lang);
 
   return (
     <main
