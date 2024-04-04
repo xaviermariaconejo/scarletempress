@@ -10,18 +10,18 @@ export function Services({ t }: { t: Locale }) {
   return (
     <>
       <section className={clsx('relative w-full', animationFadeUp)}>
-        <div className="absolute w-full h-[460px] md:h-auto">
+        <div className="absolute h-[460px] w-full md:h-auto">
           <Image
             alt="Stains desktop"
             quality={100}
             width={3496}
             height={1304}
             src="/stains-desktop.png"
-            className="hidden md:block opacity-90"
+            className="hidden opacity-90 md:block"
           />
           <Image
             alt="Stains mobile"
-            className="block md:hidden opacity-75"
+            className="block opacity-75 md:hidden"
             fill
             quality={100}
             src="/stains-mobile.png"
@@ -34,7 +34,7 @@ export function Services({ t }: { t: Locale }) {
             }}
           />
         </div>
-        <div className="relative z-10 text-center p-8 md:p-12 md:w-[500px] mx-auto md:pt-20 pt-20">
+        <div className="relative z-10 mx-auto p-8 pt-20 text-center md:w-[500px] md:p-12 md:pt-20">
           <h1 className="text-3xl font-semibold">
             Desde el boceto de tu sueño hasta la realidad de tu armario
           </h1>
@@ -46,14 +46,14 @@ export function Services({ t }: { t: Locale }) {
       </section>
       <section
         className={clsx(
-          'justify-start relative flex w-full flex-col items-center p-8 md:p-12 md:pt-0 container mx-auto',
+          'container relative mx-auto flex w-full flex-col items-center justify-start p-8 md:p-12 md:pt-0',
           animationFadeUp,
         )}
       >
         <div className="relative flex flex-col items-center justify-center">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start w-full justify-around mb-8 lg:space-x-0 sm:space-x-4 sm:space-y-0 space-y-4">
+          <div className="mb-8 flex w-full flex-col items-center justify-around space-y-4 sm:flex-row sm:items-start sm:space-x-4 sm:space-y-0 lg:space-x-0">
             <ExpandableText
-              className="lg:absolute top-0 left-0 w-full max-w-[320px] sm:max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
+              className="left-0 top-0 w-full max-w-[320px] text-center font-medium sm:max-w-sm lg:absolute lg:-left-6 lg:max-w-[280px] xl:left-0 xl:max-w-sm"
               title="Calidad al Detalle en cada Encargo"
               content="Cada pieza que creo es más
               que una prenda; es una obra de arte personalizada. Me comprometo a
@@ -62,7 +62,7 @@ export function Services({ t }: { t: Locale }) {
               entregar prendas que superen tus expectativas en cada encargo."
             />
             <ExpandableText
-              className="lg:absolute top-0 right-0 w-full max-w-[320px] sm:max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
+              className="right-0 top-0 w-full max-w-[320px] text-center font-medium sm:max-w-sm lg:absolute lg:max-w-[280px] xl:max-w-sm"
               title="Diseño Personalizado para Ti"
               content="Cada diseño comienza
               contigo. Me dedico a crear prendas que reflejen tu estilo único y
@@ -76,12 +76,12 @@ export function Services({ t }: { t: Locale }) {
             quality={100}
             width={1200}
             height={1600}
-            className="sm:w-2/3 lg:w-1/3 w-full"
+            className="w-full sm:w-2/3 lg:w-1/3"
             src="/marta-medieval-blur.png"
           />
-          <div className="flex sm:flex-row flex-col items-center sm:items-start w-full justify-around mt-8 sm:space-x-4 lg:space-x-0 sm:space-y-0 space-y-4">
+          <div className="mt-8 flex w-full flex-col items-center justify-around space-y-4 sm:flex-row sm:items-start sm:space-x-4 sm:space-y-0 lg:space-x-0">
             <ExpandableText
-              className="lg:absolute top-2/3 left-0 w-full max-w-[320px] sm:max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
+              className="left-0 top-2/3 w-full max-w-[320px] text-center font-medium sm:max-w-sm lg:absolute lg:-left-6 lg:max-w-[280px] xl:left-0 xl:max-w-sm"
               title="Calidad Inigualable en la Confección"
               content="En cada prenda que creo, persigo la excelencia en calidad y artesanía. Utilizo
               los mejores materiales y técnicas de confección para garantizar
@@ -89,7 +89,7 @@ export function Services({ t }: { t: Locale }) {
               la diferencia de la verdadera calidad en cada costura."
             />
             <ExpandableText
-              className="lg:absolute top-2/3 right-0 w-full max-w-[320px] sm:max-w-sm lg:max-w-xs xl:max-w-sm text-center font-medium"
+              className="right-0 top-2/3 w-full max-w-[320px] text-center font-medium sm:max-w-sm lg:absolute lg:max-w-[280px] xl:max-w-sm"
               title="Encargos para todas las Épocas"
               content="Me apasiona la diversidad y la creatividad en mis diseños. Desde trajes de
               fantasía medieval hasta diseños inspirados en el steampunk y más
@@ -100,9 +100,9 @@ export function Services({ t }: { t: Locale }) {
             />
           </div>
         </div>
-        <div className="min-h-0 sm:min-h-[212px] items-start mt-4 sm:mt-8 lg:mt-20 flex flex-col sm:flex-row sm:space-x-4 lg:space-x-12 space-y-4 sm:space-y-0">
+        <div className="mt-4 flex min-h-0 flex-col items-start space-y-4 sm:mt-8 sm:min-h-[212px] sm:flex-row sm:space-x-4 sm:space-y-0 lg:mt-52 lg:space-x-12 xl:mt-20">
           <ExpandableText
-            className="text-center w-[320px] sm:w-96 font-medium"
+            className="w-[320px] text-center font-medium sm:w-96"
             title="Excepcional servicio al Cliente"
             content="Tu opinión es lo más importante para mí. Desde la consulta inicial hasta la entrega
             final, te mantengo informado y te hago sentir parte del proceso en
@@ -110,7 +110,7 @@ export function Services({ t }: { t: Locale }) {
             por superar tus expectativas en cada paso del camino."
           />
           <ExpandableText
-            className="text-center w-[320px] sm:w-96 font-medium"
+            className="w-[320px] text-center font-medium sm:w-96"
             title="Selección al Detalle de Telas"
             content="La elección de las telas
             es fundamental para la calidad y el estilo de una prenda. Ofrezco

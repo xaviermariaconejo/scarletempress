@@ -9,11 +9,11 @@ export function Examples({ t }: { t: Locale }) {
   return (
     <section
       className={clsx(
-        `justify-start flex w-full flex-col items-center p-12 container mx-auto pt-4`,
+        `container mx-auto flex w-full flex-col items-center justify-start p-12 pt-4`,
         animationFadeUp,
       )}
     >
-      <p className="mb-8 md:mb-12 text-xl font-semibold mr-auto">
+      <p className="mb-8 mr-auto text-xl font-semibold md:mb-12">
         Aqui algunos de mis proyectos
       </p>
       <div className="flex">

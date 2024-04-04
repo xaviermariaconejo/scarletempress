@@ -27,7 +27,7 @@ export function Header({ t }: { t: Locale }) {
   return (
     <header
       className={clsx(
-        'left-0 top-0 z-10 w-full p-4 sticky bg-white',
+        'sticky left-0 top-0 z-10 w-full bg-white p-4',
         animationFade,
       )}
     >

@@ -9,7 +9,7 @@ const animationFadeUp =
 export function Welcome({ lang }: { lang: Lang }) {
   return (
     <section
-      className={`justify-start relative flex h-[100dvh] w-full flex-col items-center overflow-hidden p-10 pb-[120px] md:h-[60dvh] md:pt-16`}
+      className={`relative flex h-[100dvh] w-full flex-col items-center justify-start overflow-hidden p-10 pb-[120px] md:h-[60dvh] md:pt-16`}
     >
       <Image
         alt="Home background image"

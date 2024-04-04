@@ -6,7 +6,7 @@ const animationFadeUp =
 export function Services() {
   return (
     <section
-      className={`justify-start container flex min-h-[100vh] w-full flex-col items-center px-4 py-16`}
+      className={`container flex min-h-[100vh] w-full flex-col items-center justify-start px-4 py-16`}
     >
       <h2
         className={clsx(

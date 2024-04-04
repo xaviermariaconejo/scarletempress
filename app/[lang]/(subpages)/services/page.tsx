@@ -17,7 +17,7 @@ export default async function ServicesPage({
   const t = await getTranslations(params.lang);
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="flex min-h-screen flex-col">
       <Welcome t={t} />
       <Services t={t} />
       <Examples t={t} />

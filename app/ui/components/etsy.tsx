@@ -8,7 +8,7 @@ export function Etsy() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Etsy"
-      className="bg-etsy rounded p-1 text-white hover:text-scarlet-700"
+      className="rounded bg-etsy p-1 text-white hover:text-scarlet-700"
     >
       <FaEtsy size={18} />
     </a>

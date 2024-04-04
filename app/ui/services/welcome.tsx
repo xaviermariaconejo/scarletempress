@@ -8,7 +8,7 @@ const animationFadeUp =
 export function Welcome({ t }: { t: Locale }) {
   return (
     <section
-      className={`justify-start relative flex h-[40dvh] w-full flex-col items-center overflow-hidden p-12 lg:pb-14 md:pt-40`}
+      className={`relative flex h-[40dvh] w-full flex-col items-center justify-start overflow-hidden p-12 md:pt-40 lg:pb-14`}
     >
       <Image
         alt="Services title background image"
@@ -22,7 +22,7 @@ export function Welcome({ t }: { t: Locale }) {
       />
       <h1
         className={clsx(
-          'w-full md:w-1/3 text-center text-white text-3xl md:text-4xl font-bold',
+          'w-full text-center text-3xl font-bold text-white md:w-1/3 md:text-4xl',
           animationFadeUp,
         )}
       >
@@ -30,7 +30,7 @@ export function Welcome({ t }: { t: Locale }) {
       </h1>
       <h2
         className={clsx(
-          'w-full md:w-1/2 max-w-[400px] text-center text-white md:text-3xl text-2xl font-bold mt-auto',
+          'mt-auto w-full max-w-[400px] text-center text-2xl font-bold text-white md:w-1/2 md:text-3xl',
           animationFadeUp,
         )}
       >
