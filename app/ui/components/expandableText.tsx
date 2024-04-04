@@ -24,11 +24,7 @@ export function ExpandableText({
     <div className={clsx('flex flex-col items-center', className)}>
       <p
         onClick={handleClick}
-        className="flex items-center cursor-pointer whitespace-nowrap leading-none py-2 px-4 rounded-2xl mt-auto mb-2 text-lg font-semibold tracking-tight text-white border w-fit bg-opacity-80 backdrop-filter backdrop-blur-sm"
-        style={{
-          backgroundColor: '#cc1402',
-          borderColor: '#ff2400',
-        }}
+        className="flex items-center cursor-pointer whitespace-nowrap mb-2 w-fit rounded-full bg-gradient-to-b from-scarlet-600 to-scarlet-700 px-6 py-2 text-white shadow w-fit hover:from-scarlet-700 hover:to-scarlet-800 disabled:cursor-not-allowed disabled:bg-scarlet-100 disabled:bg-none disabled:text-scarlet-400"
       >
         {title}
         <IoIosArrowDown className="ml-2" />
