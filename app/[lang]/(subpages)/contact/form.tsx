@@ -7,7 +7,7 @@ import { useFormState, useFormStatus } from 'react-dom';
 const inputStyles =
   'border-scarlet-500 placeholder-gray-dark focus:border-scarlet-800 rounded-full border-2 px-4 py-2 focus:shadow-none focus:outline-none focus:ring-0';
 
-export function ContactForm() {
+export function Form() {
   const initialState: State = { status: 'idle', message: null, errors: {} };
   const [state, dispatch] = useFormState(sendContactEmail, initialState);
 
@@ -16,13 +16,13 @@ export function ContactForm() {
       action={dispatch}
       className="lg:min-w-64 flex flex-col space-y-4 p-8 pt-5 sm:pt-8 md:min-w-[500px] lg:w-1/2"
     >
-      <ContactToSubmitForm state={state} />
-      {state && state.status === 'success' && <ContactSuccessForm />}
+      <Inputs state={state} />
+      {state && state.status === 'success' && <SuccessMessage />}
     </form>
   );
 }
 
-export function ContactToSubmitForm({ state }: { state: State }) {
+export function Inputs({ state }: { state: State }) {
   const status = useFormStatus();
 
   return (
@@ -83,7 +83,7 @@ export function ContactToSubmitForm({ state }: { state: State }) {
   );
 }
 
-export function ContactSuccessForm() {
+export function SuccessMessage() {
   const status = useFormStatus();
 
   return (

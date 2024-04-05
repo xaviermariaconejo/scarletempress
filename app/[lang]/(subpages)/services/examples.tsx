@@ -14,7 +14,7 @@ export function Examples({ t }: { t: Locale }) {
       )}
     >
       <p className="mb-8 mr-auto text-xl font-semibold md:mb-12">
-        Aqui algunos de mis proyectos
+        {t.SERVICES.EXAMPLES.TITLE}
       </p>
       <div className="flex">
         <Image

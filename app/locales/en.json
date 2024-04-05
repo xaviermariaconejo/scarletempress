@@ -6,6 +6,57 @@
     "it": "Italiano",
     "fr": "Français"
   },
+  "HOME": {
+    "ABOUT_ME": {
+      "TITLE": "Who is Scarlet Empress?",
+      "TEXT_1": "¡Hola! Soy Marta, una costurera con 14 años de experiencia. Aunque no siempre de manera profesional, mis estudios en Diseño de Vestuario y Alta Costura me brindaron habilidades en patronaje a medida, historia de la moda y sastrería. He confeccionado trajes para teatro y eventos, desarrollando adaptabilidad y eficiencia. Mi pasión por la creatividad se refleja en proyectos multidisciplinarios, incluyendo el LARP, donde diseño prendas cómodas y duraderas.",
+      "TEXT_2": "Estoy emocionada por colaborar y dar vida a tus visiones de diseño. Si buscas un diseño que cuente una historia, confeccionado con técnica experta y un toque creativo, ¡contacta conmigo y comencemos a crear algo único juntos!"
+    }
+  },
+  "SERVICES": {
+    "WELCOME": {
+      "TITLE": "Explora mis servicios",
+      "SUBTITLE": "Diseños personalizados que capturan tu esencia"
+    },
+    "SERVICES": {
+      "TITLE": "Desde el boceto de tu sueño hasta la realidad de tu armario",
+      "SUBTITLE": "Transformo cualquier idea, clara o difusa, en la prenda perfecta para ti",
+      "1": {
+        "TITLE": "Calidad al Detalle en cada Encargo",
+        "DESCRIPTION": "Cada pieza que creo es más que una prenda; es una obra de arte personalizada. Me comprometo a ofrecerte un servicio de alta calidad, donde cada puntada es realizada con dedicación y atención al detalle. Confía en mí para entregar prendas que superen tus expectativas en cada encargo."
+      },
+      "2": {
+        "TITLE": "Diseño Personalizado para Ti",
+        "DESCRIPTION": "Cada diseño comienza contigo. Me dedico a crear prendas que reflejen tu estilo único y personalidad. Desde el concepto hasta el acabado final, trabajamos estrechamente juntos para asegurarnos de que tu visión se haga realidad en cada prenda que creo."
+      },
+      "3": {
+        "TITLE": "Calidad Inigualable en la Confección",
+        "DESCRIPTION": "En cada prenda que creo, persigo la excelencia en calidad y artesanía. Utilizo los mejores materiales y técnicas de confección para garantizar que cada pieza sea duradera y tenga un ajuste perfecto. Descubre la diferencia de la verdadera calidad en cada costura."
+      },
+      "4": {
+        "TITLE": "Encargos para todas las Épocas",
+        "DESCRIPTION": "Me apasiona la diversidad y la creatividad en mis diseños. Desde trajes de fantasía medieval hasta diseños inspirados en el steampunk y más allá, estoy aquí para hacer realidad tus sueños de moda. Con un enfoque en el rigor histórico y la atención al detalle, te garantizo prendas auténticas y duraderas, perfectas para tus aventuras en la recreación histórica."
+      },
+      "5": {
+        "TITLE": "Excepcional servicio al Cliente",
+        "DESCRIPTION": "Tu opinión es lo más importante para mí. Desde la consulta inicial hasta la entrega final, te mantengo informado y te hago sentir parte del proceso en todo momento. Tu satisfacción es mi máxima prioridad y me esfuerzo por superar tus expectativas en cada paso del camino."
+      },
+      "6": {
+        "TITLE": "Selección al Detalle de Telas",
+        "DESCRIPTION": "La elección de las telas es fundamental para la calidad y el estilo de una prenda. Ofrezco una amplia gama de telas de alta calidad para que elijas. Desde lujosos tejidos hasta opciones más prácticas, te ayudaré a encontrar la tela perfecta que se adapte a tus necesidades y preferencias."
+      }
+    },
+    "EXAMPLES": {
+      "TITLE": "Aqui algunos de mis proyectos"
+    }
+  },
+  "ABOUT_ME": {
+    "TITLE": "Who is Scarlet Empress?",
+    "TEXT_1": "¡Hola! Soy Marta. Llevo cosiendo desde hace 14 años. Por supuesto no todos esos años han sido de manera profesional, pero me ayudaron a asentar las bases y a poder aprovechar al máximo mi formación. He estudiado Vestuario y Alta costura, donde aprendí patronaje a medida, historia de la moda, sastrería... Todo ello hizo más fácil prepararme en patronaje digital e industrial.",
+    "TEXT_2": "Aunque la educación es muy importante, la experiencia es lo que afianza esos conocimientos. He tenido la suerte de poder coser para algunas obras de teatro, así como otros espectáculos, todos ellos con sus particularidades. Me han enseñado a ser flexible, resolutiva y rápida, así como lo que necesita cada traje según su uso, tanto en materiales como en su confección.",
+    "TEXT_3": "Desde pequeña me he acercado a todo aquello que me permita ser creativa: interpretación, música, danza... ¡Lo que me encanta de todas estas cosas es que a veces puedes hacer varias en el mismo proyecto! También he tenido la suerte de descubrir el LARP recientemente, y me encanta poder ponerme a prueba, ya sea haciendo cosas de recreación historica o simplemente diseños basados en un concepto, y hacer que sean prendas duraderas y, en la medida de lo posible, cómodas.",
+    "TEXT_4": "Estoy emocionada por colaborar y dar vida a tus visiones de diseño. Si buscas un diseño que cuente una historia, confeccionado con técnica experta y un toque creativo, ¡contacta conmigo y comencemos a crear algo único juntos!"
+  },
   "CONTACT": {
     "TITLE": "Contact Me"
   }

@@ -1,6 +1,6 @@
 import { Lang } from '@/app/lib/definitions';
 import { getTranslations } from '@/app/lib/locales';
-import { Header } from '@/app/ui/components/header';
+import { Header } from '@/app/ui/header';
 
 export default async function SubPagesLayout({
   children,

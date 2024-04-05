@@ -1,7 +1,7 @@
 import { LOCALES, WEBSITE_URL } from '@/app/lib/constants';
 import { Lang } from '@/app/lib/definitions';
-import { Footer } from '@/app/ui/components/footer';
 import { poppins } from '@/app/ui/fonts';
+import { Footer } from '@/app/ui/footer';
 import '@/app/ui/global.css';
 import { Metadata } from 'next';
 

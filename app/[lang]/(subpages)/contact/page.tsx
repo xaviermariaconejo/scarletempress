@@ -1,11 +1,12 @@
 import { Lang } from '@/app/lib/definitions';
 import { getTranslations } from '@/app/lib/locales';
-import { Email } from '@/app/ui/components/email';
-import { ContactForm } from '@/app/ui/contact/form';
+import { Email } from '@/app/ui/email';
 import clsx from 'clsx';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+
+import { Form } from './form';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -42,10 +43,10 @@ export default async function ContactPage({
             <span>Barcelona, Spain</span>
           </div>
         </div>
-        <ContactForm />
+        <Form />
       </div>
       <Image
-        className="p-8 pt-0"
+        className="p-8 pt-0 lg:max-w-screen-sm"
         alt="Sewing utensils"
         height={1365}
         src="/contact.png"

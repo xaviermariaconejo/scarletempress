@@ -1,9 +1,10 @@
 import { Lang } from '@/app/lib/definitions';
 import { getTranslations } from '@/app/lib/locales';
-import { Examples } from '@/app/ui/services/examples';
-import { Services } from '@/app/ui/services/services';
-import { Welcome } from '@/app/ui/services/welcome';
 import { Metadata } from 'next';
+
+import { Examples } from './examples';
+import { Services } from './services';
+import { Welcome } from './welcome';
 
 export const metadata: Metadata = {
   title: 'Services',

@@ -1,7 +1,7 @@
 import { Lang } from '@/app/lib/definitions';
-import { Email } from '@/app/ui/components/email';
-import { Etsy } from '@/app/ui/components/etsy';
-import { Instagram } from '@/app/ui/components/instagram';
+import { Email } from '@/app/ui/email';
+import { Etsy } from '@/app/ui/etsy';
+import { Instagram } from '@/app/ui/instagram';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';

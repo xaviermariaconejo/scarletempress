@@ -2,9 +2,9 @@
 
 import { Locale } from '@/app/lib/definitions';
 import { getLangFromPathname } from '@/app/lib/utils';
-import { Etsy } from '@/app/ui/components/etsy';
-import { Instagram } from '@/app/ui/components/instagram';
-import { LanguageSelector } from '@/app/ui/components/languageSelector';
+import { Etsy } from '@/app/ui/etsy';
+import { Instagram } from '@/app/ui/instagram';
+import { LanguageSelector } from '@/app/ui/languageSelector';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -117,9 +117,10 @@ export function MobileMenu({ scrolled }: { scrolled: boolean }) {
 
       {/* Menú */}
       <div
-        className={`fixed bottom-0 left-0 top-0 z-20 transform ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        } w-52 bg-white shadow-xl transition-transform duration-[750ms] ease-in-out`}
+        className={clsx(
+          `fixed bottom-0 left-0 top-0 z-20 w-52 transform bg-white shadow-xl transition-transform ease-in-out animate-duration-[750ms]`,
+          { 'translate-x-0': isOpen, '-translate-x-full': !isOpen },
+        )}
       >
         <button
           className="mb-4 p-4 hover:text-scarlet-700"
