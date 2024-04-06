@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import { AboutMe } from './about-me';
 import { Contact } from './contact';
 import { Services } from './services';
+import { Social } from './social';
 import { Welcome } from './welcome';
 
 const animationFadeUp =
@@ -26,6 +27,7 @@ export default async function HomePage({ params }: { params: { lang: Lang } }) {
         <Welcome t={t} lang={params.lang} />
         <Services t={t} />
         <AboutMe t={t} />
+        <Social t={t} />
         <Contact t={t} />
       </main>
     </>
