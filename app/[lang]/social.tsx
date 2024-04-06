@@ -1,18 +1,9 @@
 import { Locale } from '@/app/lib/definitions';
-import clsx from 'clsx';
 import Image from 'next/image';
-
-const animationFadeUp =
-  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export function Social({ t }: { t: Locale }) {
   return (
-    <section
-      className={clsx(
-        `container mx-auto flex w-full flex-col items-start justify-between px-4 lg:flex-row-reverse lg:space-x-8 lg:pt-16 xl:pt-32`,
-        animationFadeUp,
-      )}
-    >
+    <section className="container mx-auto flex w-full flex-col items-start justify-between px-4 lg:flex-row-reverse lg:space-x-8 lg:pt-16 xl:pt-32">
       <div className="mb-12 h-full flex-1 text-center lg:mb-0 lg:ml-32 lg:max-w-[620px] lg:text-right">
         <h2 className={'mb-8 text-3xl font-semibold'}>
           {t.HOME.ABOUT_ME.TITLE}

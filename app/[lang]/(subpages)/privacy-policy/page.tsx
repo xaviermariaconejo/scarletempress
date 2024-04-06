@@ -2,12 +2,12 @@ import { SUPPORT_EMAIL, WEBSITE_URL } from '@/app/lib/constants';
 import clsx from 'clsx';
 import { Metadata } from 'next';
 
+const animationFadeUp =
+  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
+
 export const metadata: Metadata = {
   title: 'Política de Privacidad',
 };
-
-const animationFadeUp =
-  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export default function Page() {
   return (

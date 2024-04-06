@@ -1,19 +1,18 @@
 import { Lang } from '@/app/lib/definitions';
 import { getTranslations } from '@/app/lib/locales';
+import { Form } from '@/app/ui/contact/form';
 import { Email } from '@/app/ui/email';
 import clsx from 'clsx';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
-import { Form } from './form';
+const animationFadeUp =
+  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export const metadata: Metadata = {
   title: 'Contact',
 };
-
-const animationFadeUp =
-  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export default async function ContactPage({
   params,
@@ -43,7 +42,7 @@ export default async function ContactPage({
             <span>Barcelona, Spain</span>
           </div>
         </div>
-        <Form />
+        <Form className="lg:min-w-64 p-8 pt-5 sm:pt-8 md:min-w-[500px] lg:w-1/2" />
       </div>
       <Image
         className="p-8 pt-0 lg:max-w-screen-sm"

@@ -4,12 +4,12 @@ import clsx from 'clsx';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
+const animationFadeUp =
+  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
+
 export const metadata: Metadata = {
   title: 'About Me',
 };
-
-const animationFadeUp =
-  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export default async function AboutMePage({
   params,
@@ -25,8 +25,8 @@ export default async function AboutMePage({
         animationFadeUp,
       )}
     >
-      <section className="flex flex-col items-center justify-between xl:flex-row">
-        <div className="self-start py-8 xl:w-1/2 xl:p-8 xl:pt-20">
+      <section className="flex flex-col items-center justify-between xl:flex-row xl:items-start">
+        <div className="self-start py-8 xl:w-1/2 xl:p-8 xl:pt-0">
           <h2 className="mb-8 text-center text-4xl font-semibold">
             {t.ABOUT_ME.TITLE}
           </h2>

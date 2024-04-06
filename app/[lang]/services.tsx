@@ -5,20 +5,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/app/ui/accordion';
-import clsx from 'clsx';
 import Image from 'next/image';
-
-const animationFadeUp =
-  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export function Services({ t }: { t: Locale }) {
   return (
-    <section
-      className={clsx(
-        `container relative mx-auto flex w-full flex-col items-center justify-start px-4 py-16`,
-        animationFadeUp,
-      )}
-    >
+    <section className="container relative mx-auto flex w-full flex-col items-center justify-start px-4 py-16">
       <h2 className={'mb-8 text-center text-3xl font-semibold'}>
         Hago que tus ideas tomen forma
       </h2>

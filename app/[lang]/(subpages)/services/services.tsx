@@ -1,15 +1,11 @@
 import { Locale } from '@/app/lib/definitions';
 import { ExpandableText } from '@/app/ui/expandableText';
-import clsx from 'clsx';
 import Image from 'next/image';
-
-const animationFadeUp =
-  'animate-fade-up animate-once animate-duration-1000 animate-ease-out animate-fill-forwards';
 
 export function Services({ t }: { t: Locale }) {
   return (
     <>
-      <section className={clsx('relative w-full', animationFadeUp)}>
+      <section className="relative w-full">
         <div className="absolute h-[460px] w-full md:h-auto">
           <Image
             alt="Stains desktop"
@@ -43,12 +39,7 @@ export function Services({ t }: { t: Locale }) {
           </p>
         </div>
       </section>
-      <section
-        className={clsx(
-          'container relative mx-auto flex w-full flex-col items-center justify-start p-8 md:p-12 md:pt-0',
-          animationFadeUp,
-        )}
-      >
+      <section className="container relative mx-auto flex w-full flex-col items-center justify-start p-8 md:p-12 md:pt-0">
         <div className="relative flex flex-col items-center justify-center">
           <div className="mb-8 flex w-full flex-col items-center justify-around space-y-4 sm:flex-row sm:items-start sm:space-x-4 sm:space-y-0 lg:space-x-0">
             <ExpandableText

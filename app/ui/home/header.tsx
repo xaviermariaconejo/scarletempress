@@ -40,6 +40,8 @@ export function Header({ t }: { t: Locale }) {
   }, [isMediumUp]);
 
   useEffect(() => {
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);

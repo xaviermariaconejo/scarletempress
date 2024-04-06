@@ -31,6 +31,9 @@ export type Locale = {
       TEXT_1: string;
       TEXT_2: string;
     };
+    CONTACT: {
+      TITLE: string;
+    };
   };
   SERVICES: {
     WELCOME: {
